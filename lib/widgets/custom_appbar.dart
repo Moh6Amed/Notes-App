@@ -12,7 +12,7 @@ class CustomAppBar extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
+            const Text(
               'Notes',
               style: TextStyle(
                 fontSize: 24,
@@ -20,20 +20,20 @@ class CustomAppBar extends StatelessWidget {
             ),
             ElevatedButton.icon(
               onPressed: () {},
-              label: Text(
+              label: const Text(
                 'Search',
                 style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
                     color: Colors.white),
               ),
-              icon: Icon(
+              icon: const Icon(
                 Icons.search,
                 color: Colors.white,
                 size: 24,
               ),
               style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(24),
                 ),
