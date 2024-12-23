@@ -6,10 +6,15 @@ class AddingNoteWithBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        
-        CustomTextFieled(),
+        CustomTextFieled(
+          hintName: 'Title',
+        ),
+        CustomTextFieled(
+          hintName: 'Content',
+          maxLines: 8,
+        ),
       ],
     );
   }
