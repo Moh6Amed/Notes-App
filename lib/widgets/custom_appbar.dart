@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({
+  CustomAppBar({
     super.key,
+    required this.pageTitle,
+    required this.iconText,
+    required this.icon,
   });
-
+  final String pageTitle;
+  final String iconText;
+  final IconData icon;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -12,23 +17,23 @@ class CustomAppBar extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text(
-              'Notes',
-              style: TextStyle(
+            Text(
+              pageTitle,
+              style: const TextStyle(
                 fontSize: 24,
               ),
             ),
             ElevatedButton.icon(
               onPressed: () {},
-              label: const Text(
-                'Search',
+              label: Text(
+                iconText,
                 style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
                     color: Colors.white),
               ),
-              icon: const Icon(
-                Icons.search,
+              icon: Icon(
+                icon,
                 color: Colors.white,
                 size: 24,
               ),
