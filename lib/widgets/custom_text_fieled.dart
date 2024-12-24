@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:notesapp/contstants.dart';
 
-class CustomTextFieled extends StatelessWidget {
-  CustomTextFieled({super.key, required this.hintName, this.maxLines = 1});
+class CustomTextField extends StatelessWidget {
+  CustomTextField({super.key, required this.hintName, this.maxLines = 1});
   final String hintName;
   final int maxLines;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: TextField(
         cursorColor: kPrimaryColor,
         maxLines: maxLines,
@@ -16,11 +16,11 @@ class CustomTextFieled extends StatelessWidget {
           hintText: hintName,
           hintStyle: const TextStyle(color: kPrimaryColor),
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(8),
             borderSide: const BorderSide(color: Colors.white),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(8),
             borderSide: const BorderSide(color: kPrimaryColor),
           ),
         ),
