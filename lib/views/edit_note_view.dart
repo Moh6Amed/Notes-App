@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notesapp/widgets/custom_appbar.dart';
-import 'package:notesapp/widgets/custom_text_fieled.dart';
-import 'package:notesapp/widgets/edit_note_view_body.dart';
+import 'package:notesapp/widgets/custom_text_field.dart';
 
 class EditNoteView extends StatelessWidget {
   const EditNoteView({super.key});
@@ -17,10 +16,10 @@ class EditNoteView extends StatelessWidget {
         ),
       ),
       body: ListView(
-        children: [
-          const SizedBox(height: 30),
-          CustomTextField(hintName: 'Title'),
-          const SizedBox(height: 10),
+        children:const [
+           SizedBox(height: 30),
+           CustomTextField(hintName: 'Title'),
+           SizedBox(height: 10),
           CustomTextField(
             hintName: 'Content',
             maxLines: 5,
